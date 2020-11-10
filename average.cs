@@ -16,30 +16,30 @@ public class Average
         try
         {
 
-			while (input_console != "end")
-			{
-				anotherNumber = Convert.ToDouble(input_console);
+		while (input_console != "end")
+		{
+			anotherNumber = Convert.ToDouble(input_console);
 
-				counting++;   //counter of numbers
+			counting++;   //counter of numbers
 
-				fisrtnumber += anotherNumber;  // sum of all the notes
+			fisrtnumber += anotherNumber;  // sum of all the notes
 
-				Console.Write("Insert a mark: ");
-				input_console = Console.ReadLine();
-			}
+			Console.Write("Insert a mark: ");
+			input_console = Console.ReadLine();
+		}
 
-			if (counting != 0)
-			{
-				totalAverage = fisrtnumber / counting;
-				Console.WriteLine("The average is {0}.", totalAverage);
-			}
+		if (counting != 0)
+		{
+			totalAverage = fisrtnumber / counting;
+			Console.WriteLine("The average is {0}.", totalAverage);
+		}
 
-			else if (input_console=="end")
-			{
-				Console.WriteLine("Bye!");
-			}
+		else if (input_console=="end")
+		{
+			Console.WriteLine("Bye!");
+		}
 
-		}catch (Exception e)
+	}catch (Exception e)
 		{
 			Console.WriteLine("Need one numeber please");
 		}
