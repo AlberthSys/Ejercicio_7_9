@@ -32,10 +32,12 @@ public class Average
 			totalAverage = fisrtnumber / countingNumbersInput;
 			Console.WriteLine("The average is {0}.", totalAverage);
 		}
+		
 		else if (input_console=="end")
 		{
 			Console.WriteLine("Bye!");
 		}
+		
 	}catch (Exception e)
 	{
 		Console.WriteLine("Need one number please");
