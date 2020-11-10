@@ -41,7 +41,7 @@ public class Average
 
 	}catch (Exception e)
 		{
-			Console.WriteLine("Need one numeber please");
+			Console.WriteLine("Need one number please");
 		}
 	}
 }
