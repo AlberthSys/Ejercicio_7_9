@@ -12,37 +12,42 @@ class digits
         Console.Write("Insert a number: "); 
        
         string inputDigit = Console.ReadLine();
-
-        while (inputDigit != "end")
+        try
         {
-            int input = Convert.ToInt32(inputDigit);
-
-            if (input != 0)
+            while (inputDigit != "end")
             {
-                if (input / 10 == 0)//1Digit
+                int input = Convert.ToInt32(inputDigit);
+
+                if (input != 0)
                 {
-                    oneDigit++;
+                    if (input / 10 == 0)//1 Digit
+                    {
+                        oneDigit++;
+                    }
+
+                    else if (input / 100 == 0)//2 Digit
+                    {
+                        twoDigits++;
+                    }
+
+                    else if (input / 1000 == 0)//3 Digit
+                    {
+                        threeDigits++;
+                    }
+
+                    else
+                        moreDigits++;
                 }
-                    
-                else if (input / 100 == 0)//2Digit
-                {
-                    twoDigits++;
-                }
-                     
-                else if (input / 1000 == 0)//3Digit
-                {
-                    threeDigits++;
-                }
-                    
-                else
-                    moreDigits++;
+
+                inputDigit = Console.ReadLine();
+
+                Console.WriteLine("One Digit: {0}; Two Digit: {1}; Three Digit: {2}; More Digit: {3}", oneDigit, twoDigits, threeDigits, moreDigits);
             }
-
-            inputDigit = Console.ReadLine();
             
+        }catch(Exception e)
+        {
+            Console.Write("Bye!");
         }
-
-        Console.WriteLine("one: {0} two: {1} three: {2} more: {3}", oneDigit, twoDigits, threeDigits, moreDigits);
 
     }
 }
