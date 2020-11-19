@@ -11,7 +11,7 @@ public class Average
 		string input_console;
 
 		Console.Write("Insert a mark: ");
-		input_console = Console.ReadLine(); // Check Condition
+		input_console = Console.ReadLine();
 
         try
         {
@@ -19,9 +19,9 @@ public class Average
 		{  
 			b = Convert.ToDouble(input_console);
 
-			countingNumbersInput++;   //counter of numbers
+			countingNumbersInput++; 
 
-			fisrtnumber += b;  // sum of all the notes
+			fisrtnumber += b; 
 
 			Console.Write("Insert a mark: ");
 			input_console = Console.ReadLine();
